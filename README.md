@@ -9,9 +9,9 @@
 
 ## COMMANDS
 
-- composer install. 
-- composer dump-autoload.
-- php artisan key:generate.
-- php artisan migrate --seed.
+- composer install 
+- composer dump-autoload
+- php artisan key:generate
+- php artisan migrate --seed
 
 
