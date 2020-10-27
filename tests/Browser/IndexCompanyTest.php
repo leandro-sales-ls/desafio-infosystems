@@ -7,17 +7,17 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Chrome;
 use Tests\DuskTestCase;
 
-class ExampleTest extends DuskTestCase
+class IndexCompanyTest extends DuskTestCase
 {
     /**
      * A basic browser test example.
      *
      * @return void
      */
-    public function testBasicExample()
+    public function testIndex()
     {
         $user = factory(User::class)->create([
-            'email' => 'admin'.rand(1,100).'@material.com',
+            'email' => 'admin'.rand(1,1000).'@material.com',
         ]);
 
         $this->browse(function ($browser) use ($user) {
@@ -25,7 +25,8 @@ class ExampleTest extends DuskTestCase
                     ->type('email', $user->email)
                     ->type('password', 'password')
                     ->press('letsgo')
-                    ->assertPathIs('/home');
+                    ->visit('/company-edit/1')
+                    ->assertPathIs('/company-edit/1');
         });
     }
 }
