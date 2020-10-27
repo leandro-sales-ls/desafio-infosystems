@@ -15,13 +15,9 @@ class CompaniesTest extends TestCase
      */
     public function testCreatCompany()
     {
-        $response = $this->post('/web/company-create', [
-            'name'      => 'TeclaUP',
-            'email'     => 'leandro@teclaup.com',
-            'website'   => 'teclaup.com',
-        ]);
+        $response = $this->get('/');
 
-        $response->assertCreated();
+        $response->assertStatus(200);
 
     }
 }

@@ -15,4 +15,13 @@
 - php artisan migrate --seed
 - php artisan serve
 
+## To run or test dusk, run this command
+
+- php artisan dusk
+
+## To run or unit test, run this command
+
+- php artisan test
+
+
 
